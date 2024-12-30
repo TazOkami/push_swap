@@ -6,7 +6,7 @@
 /*   By: Jpaulis <Jpaulis@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 16:30:17 by Jpaulis           #+#    #+#             */
-/*   Updated: 2024/12/30 08:56:56 by Jpaulis          ###   ########.fr       */
+/*   Updated: 2024/12/30 09:13:42 by Jpaulis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	exit_if_sorted_or_has_duplicate(t_stacks *s, int i)
 }
 
 /*convertir les arguments fournis en entiers 
- *et de les stocker dans la pile a*/
+ *et les stocker dans la pile a*/
 void	parse_numbers(t_stacks *s)
 {
 	char	**tmp;
