@@ -6,7 +6,7 @@
 /*   By: Jpaulis <Jpaulis@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 16:30:17 by Jpaulis           #+#    #+#             */
-/*   Updated: 2024/12/29 17:58:57 by Jpaulis          ###   ########.fr       */
+/*   Updated: 2024/12/30 08:56:56 by Jpaulis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,30 +103,30 @@ void	create_index(t_stacks *s)
 	free(new_a);
 }
 
-int ft_atol(const char *n, t_stacks *s)
+int	ft_atol(const char *n, t_stacks *s)
 {
-    int         i;
-    long long   sign;
-    long long   res;
+	int			i;
+	long long	sign;
+	long long	res;
 
-    res = 0;
-    sign = 1;
-    i = 0;
-    while (n[i] == ' ' || (n[i] >= '\t' && n[i] <= '\r'))
-        i++;
-    if (n[i] == '+' || n[i] == '-')
-    {
-        if (n[i] == '-')
-            sign = -1;
-        i++;
-    }
-    while (n[i])
-    {
-        if (!(n[i] >= '0' && n[i] <= '9') || ft_strlen(n) > 11)
-            free_exit_msg(s, "Error\n");
-        res = res * 10 + (n[i++] - '0');
-    }
-    if (res > INT_MAX || (res * sign) < INT_MIN || ft_strlen(n) > 11)
-        free_exit_msg(s, "Error\n");
-    return ((int)(res * sign));
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (n[i] == ' ' || (n[i] >= '\t' && n[i] <= '\r'))
+		i++;
+	if (n[i] == '+' || n[i] == '-')
+	{
+		if (n[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (n[i])
+	{
+		if (!(n[i] >= '0' && n[i] <= '9') || ft_strlen(n) > 11)
+			free_exit_msg(s, "Error\n");
+		res = res * 10 + (n[i++] - '0');
+	}
+	if (res > INT_MAX || (res * sign) < INT_MIN || ft_strlen(n) > 11)
+		free_exit_msg(s, "Error\n");
+	return ((int)(res * sign));
 }
